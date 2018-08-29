@@ -5,7 +5,7 @@ pipeline {
         stage('Create network') {
             when {
               expression {
-                return !"$(docker network ls | grep nginx-proxy)"
+                return "!$(docker network ls | grep nginx-proxy)"
               }
             }
             steps {
