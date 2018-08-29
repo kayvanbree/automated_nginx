@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Create network') {
             steps {
-                sh 'sudo docker network create nginx-proxy || true'
+                sh 'sudo docker network create nginx-proxy | true'
             }
         }
 
