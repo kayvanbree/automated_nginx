@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Create network') {
             steps {
-                sh 'docker network create nginx-proxy'
+                sh 'sudo docker network create nginx-proxy || true'
             }
         }
 
         stage('Spin up nginx') {
             steps {
-                sh 'docker-compose up -d'
+                sh 'sudo docker-compose up -d'
             }
         }
     }
