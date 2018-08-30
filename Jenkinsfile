@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        NGINX_FOLDER = /srv/www/nginx-proxy/
+        NGINX_FOLDER = '/srv/www/nginx-proxy/'
     }
 
     stages {
